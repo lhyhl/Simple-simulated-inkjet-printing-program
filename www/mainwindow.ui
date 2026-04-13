@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    /* 渐变背景，模拟凸起 */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #6a5acd, stop:0.5 #7b68ee, stop:1 #6a5acd);
+    /* 基础边框 */
+    border: 1px solid #5d4cb3;
+    /* 左上边框为亮色（高光） */
+    border-top: 3px solid #8a7df0;
+    border-left: 3px solid #8a7df0;
+    /* 右下边框为暗色（阴影） */
+    border-right: 3px solid #4a3a93;
+    border-bottom: 3px solid #4a3a93;
+    border-radius: 8px; /* 圆角 */
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+}
+
+/* 鼠标悬停状态 */
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #7b68ee, stop:0.5 #8c79ff, stop:1 #7b68ee);
+    /* 增强高光 */
+    border-top: 3px solid #9b8aff;
+    border-left: 3px solid #9b8aff;
+}
+
+/* 按下状态 */
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #5d4cb3, stop:0.5 #6a5acd, stop:1 #5d4cb3);
+    /* 反转边框明暗，模拟凹陷 */
+    border-top: 2px solid #4a3a93;
+    border-left: 2px solid #4a3a93;
+    border-right: 3px solid #8a7df0;
+    border-bottom: 3px solid #8a7df0;
+    /* 微调内边距，模拟位移 */
+    padding: 13px 23px 11px 25px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="albumBtn">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>50</y>
+      <width>181</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/ResourceImage/album.png);
+border: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="binBtn">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>70</y>
+      <width>180</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/ResourceImage/Bin.png);
+border: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PrintBtn">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>310</y>
+      <width>180</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/ResourceImage/Printer.png);
+border: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PrintRecordBtn">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>310</y>
+      <width>181</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/ResourceImage/record.png);
+border: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
